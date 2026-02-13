@@ -23,11 +23,9 @@
   },
   "action": {
     "default_popup": "popup.html",
-    "default_icon": "shopwise-collective.png
-"
+    "default_icon": "shopwise-collective.png"
   },
   "icons": {
-    "128": "shopwise-collective.png
-"
+    "128": "shopwise-collective.png"
   }
 }
