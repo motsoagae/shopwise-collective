@@ -2,21 +2,24 @@
   "manifest_version": 3,
   "name": "ShopWise Collective",
   "version": "1.0.0",
-  "description": "See real-time price changes and community insights while shopping",
+  "description": "Track prices and get alerts across Amazon and Takealot with real-time insights",
   "permissions": [
     "storage",
-    "activeTab"
+    "activeTab",
+    "notifications"
   ],
   "host_permissions": [
-    "https://*.amazon.com/*"
+    "https://*.amazon.com/*",
     "https://*.amazon.co.za/*",
     "https://*.takealot.com/*"
   ],
   "content_scripts": [
     {
-      "matches": ["https://*.amazon.com/*"],
-      "https://*.amazon.co.za/*",
+      "matches": [
+        "https://*.amazon.com/*",
+        "https://*.amazon.co.za/*",
         "https://*.takealot.com/*"
+      ],
       "js": ["content.js"],
       "css": ["styles.css"],
       "run_at": "document_idle"
@@ -27,7 +30,9 @@
   },
   "action": {
     "default_popup": "popup.html",
-    "default_icon": "shopwise.png"
+    "default_icon": {
+      "128": "shopwise.png"
+    }
   },
   "icons": {
     "128": "shopwise.png"
